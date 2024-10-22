@@ -1,4 +1,5 @@
 ![kropka do patternu-1-min](https://github.com/user-attachments/assets/e4e318ce-5267-477b-8030-ce7dfa502258)
+
 <h1 align="center">EsPlugins</h1>
 <p align="center"><b>Home for esbuild plugins!</b></p>
 <div align="center">
@@ -17,7 +18,7 @@ About:
 About packages:
 
 - ♻️ Minified
-- ⚠️ Error Handler (Custom - `oh-my-error`, why this?)
+- ⚠️ Error Handler
 - ✅ Support JS/TS & CJS/ESM
 - 📝 Debug Logging (Only for CLI commands)
 
@@ -32,3 +33,7 @@ About packages:
 | ❌    | Aborted         |
 | 🛠️    | In Progress     |
 | 💤    | Not Yet Started |
+
+| Name                  | Description                                                              | NPM | Progress Status |
+| --------------------- | ------------------------------------------------------------------------ | --- | --------------- |
+| `no-internal-exports` | Do not export in entry file `@internal` marked functions/types/variables | `-` | 🛠️              |
