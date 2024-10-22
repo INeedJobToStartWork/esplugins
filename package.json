@@ -1,0 +1,48 @@
+{
+  "name": "esplugins-monorepo",
+  "version": "0.0.0",
+  "private": true,
+  "description": "",
+  "keywords": [],
+  "type": "module",
+  "author": "ineedjobtostartwork",
+  "license": "MIT",
+  "scripts": {
+    "dev": "turbo dev",
+    "build": "turbo build",
+    "build:npm": "turbo build:npm",
+    "start": "turbo start",
+    "lint": "turbo lint",
+    "lint:fix": "turbo lint:fix",
+    "lint:next": "turbo lint:next",
+    "lint:test": "turbo lint:test",
+    "format": "turbo format",
+    "clean": "turbo clean",
+    "npm:prepack": "turbo npm:prepack",
+    "npm:postpack": "turbo npm:postpack",
+    "npm:version": "changeset version",
+    "npm:publish": "changeset publish",
+    "preinstall": "husky init",
+    "pre": "turbo pre",
+    "pre:husky": "git add . && lint-staged",
+    "prepare": "husky",
+    "test": "echo \"Error: no test specified\""
+  },
+  "devDependencies": {
+    "@changesets/cli": "^2.27.9",
+    "@types/lint-staged": "~13.3.0",
+    "@types/node": "^20.16.14",
+    "commitsmile": "^0.6.1",
+    "globals": "^13.24.0",
+    "husky": "^8.0.3",
+    "lint-staged": "^15.2.7",
+    "turbo": "latest"
+  },
+  "engines": {
+    "node": ">=18"
+  },
+  "lint-staged": {
+    "*": ""
+  },
+  "packageManager": "pnpm@9.4.0"
+}

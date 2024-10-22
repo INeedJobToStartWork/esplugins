@@ -1,0 +1,5 @@
+packages:
+  - "website/*"
+  - "config/*"
+  - "packages/*"
+  - "tests/*"
