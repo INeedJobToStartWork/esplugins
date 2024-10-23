@@ -36,4 +36,4 @@ About packages:
 
 | Name                  | Description                                                              | NPM | Progress Status |
 | --------------------- | ------------------------------------------------------------------------ | --- | --------------- |
-| `no-internal-exports` | Do not export in entry file `@internal` marked functions/types/variables | `-` | 🛠️              |
+| `@esplugins/no-internal-exports` | Do not export in entry file `@internal` marked functions/types/variables | [`@esplugins/no-internal-exports`](https://www.npmjs.com/package/@esplugins/no-internal-exports) | ✅              |
