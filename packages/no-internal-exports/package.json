@@ -1,6 +1,6 @@
 {
   "name": "@esplugins/no-internal-exports",
-  "version": "1.0.0-prerelease",
+  "version": "1.0.0-prerelease.1",
   "description": "Esbuild plugin for not exporting @internal functions/types/variables",
   "keywords": [
     "no-internal-exports",
@@ -41,8 +41,9 @@
     ]
   },
   "dependencies": {
-    "typescript": "^5.6.3",
-    "oh-my-error": "^2.0.0-prerelease.0"
+    "magic-regexp": "^0.8.0",
+    "oh-my-error": "^2.0.0-prerelease.0",
+    "typescript": "^5.6.3"
   },
   "devDependencies": {
     "@ineedj/eslintrc": "~1.2.0",

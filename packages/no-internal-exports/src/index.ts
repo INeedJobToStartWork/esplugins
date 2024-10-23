@@ -2,6 +2,7 @@
 /* eslint-disable @typescript-eslint/no-unsafe-member-access */
 /* eslint-disable @EslintUnicorn/no-null */
 /* eslint-disable complexity */
+
 import type { Plugin } from "esbuild";
 import { existsSync, readFileSync, statSync } from "node:fs";
 import { dirname, join, relative, resolve } from "node:path";
@@ -208,7 +209,7 @@ export const noInternalExports: Plugin = {
         visitedFiles.add(resolvedPath);
         const source = readFileSync(resolvedPath, "utf8");
         const INTERNAL_REGEX =
-          /(?:\/\*\*?[\s*]*@internal[\s*]*\*\/|\/\/\s*@internal)\s*(?:export\s+)?(?:function|const|let|var|class|type|interface)?\s*(\w+)/g;
+          /\/\*\*[\S\s]*?@internal[\S\s]*?\*\/\s*(?:export\s+)?(?:function|const|let|var|class|type|interface)?\s*(\w+)/gim;
 
         let match;
         while ((match = INTERNAL_REGEX.exec(source)) !== null) {
