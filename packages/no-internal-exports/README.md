@@ -7,7 +7,9 @@
 <!-- <img alt="Crates.io Size" src="https://img.shields.io/bundlephobia/size/@better/validate-npm-package-name"> -->
 <hr/>
 
-If you ever wanted to export `@internal` **Functions/Variables/Types** but you was worried about exporting that outside with entry files <br><br> <b>Dont Worry</b> <br><br>Right know you can export them in your codebase and protect them to not being exported in entry file.
+If you ever wanted to export `@internal` **Functions/Variables/Types** but you was worried about exporting that outside
+with entry files <br><br> <b>Dont Worry</b> <br><br>Right know you can export them in your codebase and protect them to
+not being exported in entry file.
 
 ```typescript
 // index.ts (Entry file)
@@ -109,10 +111,10 @@ There you can check support for other bundlers!
 import noInternalExport from "@esplugins/no-internal-exports";
 
 return esbuild.build({
-  entryPoints: ["src/index.ts"],
-  // bundle: true,  Do like you want there, just example
-  // outfile: "out.js", -||-
-  plugins: [noInternalExport],
+	entryPoints: ["src/index.ts"],
+	// bundle: true,  Do like you want there, just example
+	// outfile: "out.js", -||-
+	plugins: [noInternalExport]
 });
 ```
 
@@ -123,24 +125,26 @@ import { defineConfig } from "tsup";
 import noInternalExport from "@esplugins/no-internal-exports";
 
 export default defineConfig({
-  entry: ["src/index.ts"],
-  // target: "es2022",  Do like you want there, just example
-  // format: ["esm"], -||-
-  // clean: true, -||-
-  // splitting: false, -||-
-  // platform: "node", -||-
-  // keepNames: true, -||-
-  esbuildPlugins: [noInternalExport],
+	entry: ["src/index.ts"],
+	// target: "es2022",  Do like you want there, just example
+	// format: ["esm"], -||-
+	// clean: true, -||-
+	// splitting: false, -||-
+	// platform: "node", -||-
+	// keepNames: true, -||-
+	esbuildPlugins: [noInternalExport]
 });
 ```
 
 ## Usage
 
-Just use `@internal` in **multi-line comment** before **Function/Variable/Type**.
-(Like in JSDocs/TSDocs)
+Just use `@internal` in **multi-line comment** before **Function/Variable/Type**. (Like in JSDocs/TSDocs)
 
-> [!TIP]
-> To Typescript config you can add [`stripInternal`](https://www.typescriptlang.org/tsconfig/#stripInternal) at `compilerOptions` to do not emit `@internal` types in `d.ts`!
+> [!TIP] To Typescript config you can add [`stripInternal`](https://www.typescriptlang.org/tsconfig/#stripInternal) at
+> `compilerOptions` to do not emit `@internal` types in `d.ts`!
+
+> [!TIP] alternative for Types To mark type/interface/enum as internal and avoid removing them from `d.ts` you can use
+> `@dontexport`!
 
 ```ts
 /** @internal */
