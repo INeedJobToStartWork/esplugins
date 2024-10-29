@@ -1,6 +1,6 @@
 {
 	"name": "@esplugins/no-internal-exports",
-	"version": "1.0.0-prerelease.2",
+	"version": "1.0.0",
 	"description": "Esbuild plugin for not exporting @internal functions/types/variables",
 	"keywords": [
 		"no-internal-exports",

@@ -2,7 +2,13 @@
 
 ## 1.0.0
 
-### Major Changes
+### Patch Changes
+
+- fix deeper checking
+
+## 1.0.0-prerelease.2
+
+### Minor Changes
 
 - add `@dontexport` tag as alternative to `@internal` for types and improve regex finder
 
