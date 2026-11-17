@@ -24,7 +24,7 @@ jobs:
         id: changesets
         uses: changesets/action@v1
         with:
-          publish: pnpm npm:publish --no-git-checks --tag latest
+          publish: pnpm npm:publish --tag latest
           title: '🤖 ci(changesets): :package: version packages'
           commit: '🤖 ci(changesets): version packages'
           setupGitUser: false

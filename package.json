@@ -32,7 +32,7 @@
     "npm:prepack": "turbo npm:prepack",
     "npm:postpack": "turbo npm:postpack",
     "npm:version": "changeset version",
-    "npm:publish": "changeset publish",
+    "npm:publish": "turbo build:npm --filter=\"!./turbo/generators/templates/**\" && changeset publish",
     "------------------------TESTS--------------------------": "",
     "test": "turbo test",
     "test:coverage": "turbo test:coverage",
