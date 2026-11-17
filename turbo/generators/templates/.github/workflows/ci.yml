@@ -1,0 +1,22 @@
+name: CI/CD
+on:
+  push:
+    branches: [main]
+  pull_request:
+    branches: [main]
+jobs:
+  Deploy:
+    runs-on: ubuntu-latest
+    permissions:
+      contents: read
+      id-token: write
+    steps:
+      - uses: actions/checkout@v2
+      - name: 🟢 Setup
+        uses: ./.github/common-actions/install
+      - name: 📝 Lint
+        run: pnpm lint
+      - name: ♻️ Format
+        run: pnpm format
+      - name: 🏗️ Build Package
+        run: pnpm build:npm --filter='!./turbo/generators/templates/**' # the template's Handlebars package name can't be packed

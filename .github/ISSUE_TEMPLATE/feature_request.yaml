@@ -10,9 +10,9 @@ body:
         It's good to know you're creative ✨
 
         Before submitting a new feature request, please check the links below to see if there somebody already requested it:
-          - esplugins's [Issue's tab](https://github.com/INeedJobToStartWork/esplugins/issues)
-          - esplugins's [closed issues tab](https://github.com/INeedJobToStartWork/esplugins/issues?q=is%3Aissue+is%3Aclosed)
-          - esplugins's [Discussions tab](https://github.com/INeedJobToStartWork/esplugins/discussions)
+          - Let-me-test's [Issue's tab](https://github.com/INeedJobToStartWork/Let-me-test/issues)
+          - Let-me-test's [closed issues tab](https://github.com/INeedJobToStartWork/Let-me-test/issues?q=is%3Aissue+state%3Aclosed)
+          - Let-me-test's [Discussions tab](https://github.com/INeedJobToStartWork/Let-me-test/discussions)
 
         Please fill in as much of the template below as you're able. If you don't know the answer to a question, that's okay, but please try to fill in as much as you can.
   - type: input
@@ -37,7 +37,7 @@ body:
   - type: input
     id: solution
     attributes:
-      label: What it gonna solve? Why we should ad it?
+      label: What it gonna solve? Why should we add it?
       description: How it will help you and others? What kind of problems it will solve?.
       placeholder: |
         e.g It will help me and users to prevent api calls spamming and give a better user experience.
