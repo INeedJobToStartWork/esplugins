@@ -2,7 +2,7 @@ import ineedj from "@ineedj/eslintrc";
 
 export default ineedj({
 	formatters: {
-		json: true,
+		json: false,
 		stylistic: false,
 		stylisticJSX: false,
 		stylisticTS: false,
@@ -12,8 +12,7 @@ export default ineedj({
 		commands: true
 	},
 	syntax: {
-		mdx: true,
-		vitest: false,
+		vitest: true,
 		eslint: true,
 		jsx: false,
 		next: false,
@@ -22,18 +21,21 @@ export default ineedj({
 		storybook: false,
 		tailwindcss: false,
 		typescript: true,
-		toml: true,
-		yaml: true,
-		turbo: false,
+		toml: false,
+		yaml: false,
 		ignoreGlobalFiles: {
 			gitIgnore: true,
-			basicIgnores: true
+			basicIgnores: true,
+			ignoreFiles: ["**/*.test.ts", "tests/integration/consumer/**"]
 		}
 	}
 }).removeRules(
+	"@typescript-eslint/no-throw-literal" /** Use custom Error */,
 	"@EslintSecurity/detect-object-injection",
-	"@typescript-eslint/no-throw-literal",
-	"@EslintImports/namespace"
+	"MD010/no-hard-tabs",
+	"@EslintTSDocs/syntax",
+	"@EslintNode/no-process-env",
+	"@EslintNode/no-process-exit",
+	"@EslintUnicorn/no-process-exit",
+	"@EslintNode/hashbang"
 );
-
-// export default [];

@@ -1,20 +1,87 @@
 {
-  "indent": 4,
-  "remove": ["devDependencies", "lint-staged", "bin"],
-  "replace": {
-    "type": "commonjs",
-    "scripts": {
-      "npm:postpack": "clean-package restore"
-    },
-    "exports": {
-      ".": {
-        "types": {
-          "import": "./index.d.mts",
-          "require": "./index.d.ts"
-        },
-        "import": "./index.mjs",
-        "require": "./index.js"
-      }
-    }
-  }
+	"indent": 4,
+	"remove": ["devDependencies", "lint-staged"],
+	"replace": {
+		"name": "@esplugins/no-internal-exports",
+		"type": "commonjs",
+		"scripts": {
+			"npm:postpack": "clean-package restore"
+		},
+		"main": "./index.cjs",
+		"module": "./index.mjs",
+		"types": "./index.d.cts",
+		"exports": {
+			".": {
+				"import": {
+					"types": "./index.d.mts",
+					"default": "./index.mjs"
+				},
+				"require": {
+					"types": "./index.d.cts",
+					"default": "./index.cjs"
+				}
+			},
+			"./unplugin": {
+				"import": {
+					"types": "./unplugin.d.mts",
+					"default": "./unplugin.mjs"
+				},
+				"require": {
+					"types": "./unplugin.d.cts",
+					"default": "./unplugin.cjs"
+				}
+			},
+			"./vite": {
+				"import": {
+					"types": "./vite.d.mts",
+					"default": "./vite.mjs"
+				},
+				"require": {
+					"types": "./vite.d.cts",
+					"default": "./vite.cjs"
+				}
+			},
+			"./rollup": {
+				"import": {
+					"types": "./rollup.d.mts",
+					"default": "./rollup.mjs"
+				},
+				"require": {
+					"types": "./rollup.d.cts",
+					"default": "./rollup.cjs"
+				}
+			},
+			"./rolldown": {
+				"import": {
+					"types": "./rolldown.d.mts",
+					"default": "./rolldown.mjs"
+				},
+				"require": {
+					"types": "./rolldown.d.cts",
+					"default": "./rolldown.cjs"
+				}
+			},
+			"./webpack": {
+				"import": {
+					"types": "./webpack.d.mts",
+					"default": "./webpack.mjs"
+				},
+				"require": {
+					"types": "./webpack.d.cts",
+					"default": "./webpack.cjs"
+				}
+			},
+			"./rspack": {
+				"import": {
+					"types": "./rspack.d.mts",
+					"default": "./rspack.mjs"
+				},
+				"require": {
+					"types": "./rspack.d.cts",
+					"default": "./rspack.cjs"
+				}
+			},
+			"./package.json": "./package.json"
+		}
+	}
 }
